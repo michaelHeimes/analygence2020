@@ -1,0 +1,14 @@
+#Ignore Generated/System Files
+.sass-cache
+*.unprefixed.css
+*.map
+.log
+.DS_Store
+.idea
+acf-json
+
+#Ignore Gulp Files
+node_modules
+npm-debug.log
+
+

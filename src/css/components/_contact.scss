@@ -1,0 +1,229 @@
+$bp-contact-lg: 1024px;
+$bp-contact-stack: 890px;
+$bp-contact-sm: 550px;
+
+.contact-wrap {
+	padding:64px 0;
+	@include respond($bp-hamburger) {
+		padding:80px 0;	
+	}
+	.container {
+		max-width: 1212px;
+		@include respond($bp-contact-stack) {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;	
+		}
+	}
+}
+
+.contact-left {
+	
+	
+	padding:0;
+	margin:0 24px 0 0;
+	
+	@include respond($bp-contact-sm) {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	@include respond($bp-contact-stack) {
+		display: block;
+		width: 300px;
+		flex: 300px 0 0;
+		-ms-flex: 0 1 auto;
+	}
+	@include respond($bp-contact-lg) {
+		margin:0 64px 0 0;	
+		width: 340px;
+		flex: 340px 0 0;
+	}
+}
+
+.contact-block {
+	margin:0 0 32px 0;
+	font-size: 1em;
+	line-height: 1.5;
+	
+	@include respond($bp-contact-sm) {
+		width:50%;
+		flex: 50% 0 0;
+		padding:0 32px 0 0;	
+	}
+	@include respond($bp-contact-stack) {
+		width: 100%;	
+		padding:0;
+		font-size: 1.25em;
+		line-height: 1.6;
+	}
+}
+
+.contact-right {
+	padding:16px;
+	max-width: 936px;
+	flex: auto 1 1;
+	width:100%;
+	-ms-flex: 0 1 auto;
+	background-color: $color-light;
+	background-image: url(../svg/sidebar.svg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size:100% auto;
+	@include respond($bp-contact-sm) {
+		padding:32px;	
+	}
+	@include respond($bp-contact-stack) {
+		padding: 16px;
+	}
+	@include respond($bp-contact-lg) {
+		padding:32px;
+	}
+	p {
+		padding:0 16px;
+		margin:0 0 24px 0;
+	}
+}
+
+.gform_fields {
+	list-style: none;
+	padding:0;
+	margin:0;
+	@include respond($bp-contact-sm) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	@include respond($bp-contact-stack) {
+		display: block;	
+	}
+	@include respond($bp-contact-lg) {
+		display: flex;
+	}
+	li {
+		
+		padding:0 0 32px 0;
+		margin:0;
+		@include respond($bp-contact-sm) {
+			width:50%;
+			flex: 50% 0 0;
+			-ms-flex: 0 1 auto;
+			padding:0 16px 32px 16px;
+		}
+		@include respond($bp-contact-stack) {
+			width:100%;
+			flex: 100% 0 0;	
+		}
+		@include respond($bp-contact-lg) {
+			width:50%;
+			flex: 50% 0 0;
+		}
+		&.full-width {
+			width:100%;
+			flex: 100% 0 0;
+			-ms-flex: 0 1 auto;
+		}
+		input,
+		textarea {
+			background:#fff;
+			width:100%;
+			font-family: $font;
+			font-size:1em;
+			@include respond($bp-contact-sm) {
+				font-size:1.25em;	
+			}
+		}
+		input {
+			height:48px;
+			line-height: 48px;
+			padding:0 16px;
+		}
+		textarea {
+			padding:16px;
+			line-height: 1.6;
+			height:200px;
+			resize: vertical;
+		}
+		label {
+			font-weight: bold;
+			font-size:0.875em;
+			line-height: 1.1428571429;
+			margin:0 0 8px 0;
+			display: block;
+		}
+		select {
+			box-shadow: none !important;
+			border-radius: 0;
+			border: none;
+			background-color:#fff;
+			padding: 3px 16px 11px 0;
+			color: $color-body;
+			font-family: $font;
+			width: 100%;
+			font-size:1em;
+			height:48px;
+			line-height: 48px;
+			padding:0 0 0 16px;
+			@include respond($bp-contact-sm) {
+				font-size:1.25em;	
+			}
+		}
+	}
+}
+
+.gform_footer {
+	text-align: right;
+	@include respond($bp-contact-sm) {
+		padding:0 16px;
+	}
+
+}
+
+
+.gform_confirmation_message {
+	font-size: 1.25em;
+	line-height: 1.6;
+}
+
+
+.gform_button {
+	background: $color-red;
+	transition: background 0.2s ease;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color:#fff;
+	font-family: $font;
+	font-size:1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding:23px 32px;
+	-webkit-appearance: none;
+	border-radius: 0;
+	&:hover {
+		text-decoration: none;
+		background: darken($color-red, 5%);
+	}
+}
+
+.gform_validation_container {
+	display: none;
+}
+
+.validation_error {
+	padding:0 16px;
+	margin:0 0 32px 0;
+	color: $color-red;
+}
+
+.gfield_description.validation_message {
+	color: $color-red;
+	margin: 8px 0 0 0;
+}
+
+.gform_fields li.gfield_error > label {
+	color: $color-red;
+}

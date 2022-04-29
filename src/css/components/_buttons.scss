@@ -1,0 +1,50 @@
+.btn {
+	background: $color-red;
+	transition: background 0.2s ease;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color:#fff;
+	font-family: $font;
+	font-size:1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding:23px 32px;
+}
+
+.btn img,
+.btn svg {
+	display: block;
+	margin:0 10px 0 0;
+}
+
+.btn:hover {
+	text-decoration: none;
+	background: darken($color-red, 5%);
+}
+
+
+.cta {
+	color: $color-red;
+	font-family: $font;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	line-height: 1.5;
+	font-size: 1em;
+	img,
+	svg {
+		display: inline;
+		margin:0 0 0 10px;
+		transition: transform 0.2s ease;
+	}
+	&:hover {
+		text-decoration: none;
+		color: darken($color-red, 5%);
+		img{
+			transform: translateX(4px);
+		}
+	}
+}

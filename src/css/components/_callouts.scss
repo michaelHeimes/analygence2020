@@ -1,0 +1,81 @@
+$bp-callouts-lg: 1000px;
+$bp-callouts-stack: 700px;
+
+.callouts {
+	@include respond($bp-callouts-stack) {
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
+	}
+}
+
+.callout {
+	display: block;
+	
+	padding:24px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right top;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top:1px solid rgba(71, 72, 72, 0.1);
+	&.callout-one {
+		background-image: url(../svg/callout-bg-1.svg);
+		.callout-title,
+		.callout-cta {
+			color:#fff;
+		}
+	}
+	&.callout-two {
+		background-image: url(../svg/callout-bg-2.svg);
+	}
+	&.callout-three {
+		background-image: url(../svg/callout-bg-3.svg);
+	}
+	@include respond($bp-callouts-stack) {
+		padding:80px 48px 96px 48px;
+		width:33.3333333333%;
+		flex: 33.3333333333% 0 0;
+		-ms-flex: 0 1 auto;
+		&.callout-one {
+			border-left: none;
+			border-right: 1px solid rgba(71, 72, 72, 0.1);
+			
+		}
+		
+		&.callout-three {
+			border-right:none;
+			border-left:1px solid rgba(71, 72, 72, 0.1);
+		}
+	}
+	
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.callout-inner {
+	display: block;
+	text-align: center;
+}
+
+.callout-title {
+	display: block;
+	font-size:1.125em;
+	line-height: 1.3333333333;
+	font-family: $font-condensed;
+	font-weight: bold;
+	margin:32px auto 16px auto;
+	color: $color-body;
+	max-width: 280px;
+	@include respond($bp-callouts-lg) {
+		font-size:1.75em;
+		line-height: 1.1428571429;
+	}
+}
+
+.callout:hover .callout-cta.cta img {
+	transform: translateX(4px);
+}

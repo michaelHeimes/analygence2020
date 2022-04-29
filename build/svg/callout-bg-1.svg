@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="345px" viewBox="0 0 480 345" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>background</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="480" height="345"></rect>
+        <polygon id="path-3" points="288.86682 0 493 0 204.13318 480 0 480"></polygon>
+        <linearGradient x1="81.7213175%" y1="0%" x2="50%" y2="52.3080558%" id="linearGradient-5">
+            <stop stop-color="#4F4C4B" offset="0%"></stop>
+            <stop stop-color="#3B3938" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-6" points="133.617682 0 291.87245 0 2.2547679 480.4769 -156 480.4769"></polygon>
+    </defs>
+    <g id="hp" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hp-desktop-final" transform="translate(0.000000, -3699.000000)">
+            <g id="CTAs-block" transform="translate(0.000000, 3698.000000)">
+                <g id="1.-let's-get-to-work" transform="translate(0.000000, 1.000000)">
+                    <g id="background">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Rectangle" fill="#262322" opacity="0.9" xlink:href="#path-1"></use>
+                        <g id="diagonal" mask="url(#mask-2)">
+                            <g transform="translate(266.000000, 0.000000)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Rectangle-Copy-11" stroke="none" fill="#4E4B49" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                <mask id="mask-7" fill="white">
+                                    <use xlink:href="#path-6"></use>
+                                </mask>
+                                <use id="Combined-Shape" stroke="none" fill="url(#linearGradient-5)" fill-rule="evenodd" xlink:href="#path-6"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

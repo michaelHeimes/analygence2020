@@ -1,0 +1,31 @@
+.utility {
+	padding:10px 0;	
+	border-bottom:1px solid rgba(71, 72, 72, 0.1);
+	display: none;
+	@include respond($bp-hamburger) {
+		display: block;
+	}
+}
+
+.utility .container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.utility .container a {
+	color: $color-body;
+	display: block;
+	margin:0 0 0 24px;
+	font-size: 0.875em;
+	line-height: 1;
+	letter-spacing: -0.25px;
+	font-weight: 300;
+	&:first-of-type {
+		margin:0;
+	}
+	&:hover {
+		color: $color-red;
+		text-decoration: underline;
+	}
+}

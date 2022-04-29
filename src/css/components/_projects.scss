@@ -1,0 +1,190 @@
+$bp-projects-lg: 1000px;
+$bp-project-stack: 768px;
+$bp-project-sm: 480px;
+
+.projects {
+	max-width: 1212px;
+	margin:0 auto;
+	padding:0 16px;
+	position: relative;
+	&.projects-inner {
+		padding-top:64px;
+		border-top: 1px solid rgba(71, 72, 72, 0.1);
+		padding-bottom:64px;
+		@include respond($bp-project-stack) {
+			padding-bottom:208px;
+			padding-top:80px;
+		}
+	}
+}
+
+
+.project {
+	@include respond($bp-project-stack) {
+		display: flex;
+		align-items: stretch;
+		justify-content: flex-start;
+	}
+	
+}
+
+.project-left {
+	
+	position: relative;
+	z-index: $z_index-level1 + 1;
+	@include respond($bp-project-stack) {
+		flex: 322px 0 0;
+		-ms-flex: 0 1 auto;
+		max-width: 322px;	
+	}
+	@include respond($bp-projects-lg) {
+		flex: 422px 0 0;
+		-ms-flex: 0 1 auto;
+		max-width: 422px;	
+	}
+}
+
+.project-right {
+	
+	position: relative;
+	z-index: $z_index-level1;
+	width:100%;
+	@include respond($bp-project-stack) {
+		flex: auto 1 1;
+		-ms-flex: 0 1 auto;
+		max-width: 758px;	
+	}
+}
+
+.project-image {
+
+	background-color:#ccc;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-top: (540 / 842) * 100%;
+	@include respond($bp-project-stack) {
+		padding:0;
+		position: absolute;
+		bottom:70px;
+		top:0;
+		right:0;
+		left:-80px;	
+	}
+}
+
+.project-title {
+	font-size:3em;
+	line-height: 1.1666666667;
+	margin:0;
+	padding:0 0 32px 0;
+	position: relative;
+	text-transform: uppercase;
+	color: $color-body;
+	.smaller {
+		display: block;
+		font-size: 0.5416666667em;
+		text-transform: none;
+		font-weight: 400;
+	}
+	&:after {
+		@include redBar;
+	}
+}
+
+.project-info {
+	margin:40px 0 0 0;
+	position: relative;
+	background-color: $color-dark;
+	padding:24px 24px 96px 24px;
+	@include respond($bp-project-sm) {
+		padding:32px 40px 122px 40px;
+	}
+	@include respond($bp-project-stack) {
+		margin:80px 0 0 0;
+	}
+}
+
+.project-name {
+	color:#fff;
+	font-size: 1.75em;
+	line-height: 1.1428571429;
+	margin:0;
+	font-family: $font-condensed;
+}
+
+.project-summary {
+	color:#fff;
+	font-size: 1.125em;
+	line-height: 1.5555555556;
+	font-weight: 300;
+	margin:24px 0 0 0;
+	padding:24px 0 0 0;
+	border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.project-info .btn {
+	position: absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	justify-content: flex-start;
+}
+
+
+.project-nav {
+	
+	text-align: center;
+	z-index: $z_index-level1 + 2;
+	margin:24px 0 0 0;
+	@include respond($bp-project-stack) {
+		margin:0;
+		position: absolute;
+		bottom:0;
+		right:0;
+		width:64%;
+	}
+	.slick-dots {
+		list-style: none;
+		margin:0;
+		padding:0;
+		li {
+			margin:0;
+			padding:0;
+			display: inline-block;
+			button {
+				overflow: hidden;
+				cursor: pointer;
+				background: rgba(110, 100, 114, 0.3);
+				padding:0;
+				height:5px;
+				width:40px;
+				margin:0 4px;
+				text-indent: -9999px;
+				transition: background 0.2s ease;
+				&:hover {
+					background-color: $color-red;
+				}
+			}
+			&.slick-active button {
+				background-color: $color-red;
+			}
+		}
+	}
+}
+
+
+.projects-inner {
+	.project-image {
+		bottom:-80px;
+	}
+	.project-info {
+		padding-bottom: 80px;
+	}
+	
+	.project-right .btn {
+		position: absolute;
+		bottom:0;
+		right:0;
+	}
+}

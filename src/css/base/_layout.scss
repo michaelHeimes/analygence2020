@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+//! GENERAL
+// -----------------------------------------------------------------------------
+
+html {
+	height: 100%;
+	background:#fff;
+}
+
+body {
+	background:#fff;
+	position: relative;
+	min-height: 100%;
+	overflow-x: hidden;	
+}
+
+
+.container {
+	max-width: 1372px;
+	width: 100%;
+	margin:0 auto;
+	padding:0 16px;
+}
+

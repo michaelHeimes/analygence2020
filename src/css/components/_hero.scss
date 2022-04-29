@@ -1,0 +1,70 @@
+$bp-splash-lg: 760px;
+$bp-splash-md: 640px;
+$bp-splash-sm: 450px;
+
+.hero {
+	background-color: $color-dark;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height:400px;
+	position: relative;
+	z-index: $z_index-level1;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	@include respond($bp-splash-lg) {
+		height:550px;
+	}
+}
+
+
+.hero.is-thin {
+	height:200px;
+	@include respond($bp-splash-lg) {
+		height:250px;
+	}
+}
+
+.hero .container {
+	padding:0 24px;
+	@include respond($bp-splash-lg) {
+		padding:0 96px;	
+	}
+}
+
+
+.hero-title {
+	color: #fff;
+	font-family: $font-condensed;
+	font-size:2em;
+	line-height: 1.1875;
+	letter-spacing:0.8888px;
+	text-transform: uppercase;
+	margin:0;
+	padding:0 0 32px 0;
+	position: relative;
+	@include respond($bp-splash-sm) {
+		font-size:3em;
+		line-height: 1.1666666667;
+		letter-spacing: 1.33px;	
+	}
+	@include respond($bp-splash-md) {
+		font-size:3.75em;
+		line-height: 1.3333333333;
+		letter-spacing: 1.76px;
+	}
+	&:after {
+		@include redBar;
+	}
+}
+
+.breadcrumbs {
+	display: block;
+	font-weight: bold;
+	font-family: $font;
+	margin:0;
+	font-size:16px;
+	line-height: 1.5;
+}
