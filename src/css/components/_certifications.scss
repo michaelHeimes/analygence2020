@@ -26,9 +26,10 @@
 
 .subhero-right .certifications-grid {
 	margin:24px -16px 0 -16px;
+	justify-content: flex-start;
 
 	@include respond(420px) {
-		flex-wrap: nowrap;	
+		//flex-wrap: nowrap;	
 		margin:48px -16px 0 -16px;	
 	}
 	@include respond(960px) {
